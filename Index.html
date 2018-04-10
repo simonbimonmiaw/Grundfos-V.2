@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    
+	<title>Grundfos - Ecademy</title>
+	
+	<link rel="icon" href="https://www.grundfos.com/etc/designs/grundfos/internet/responsive/images/favicon.ico">
+	
+	<link href="css/IndexStylesheet.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/animate.css">
+	
+</head>
+
+<body>
+
+<header class="header"> 
+	<a onClick="Reload()"><img class="header__logo" src="images/Grundfos-Logo.png" alt="Grundfos-Logo"/></a>
+    <section class="header__login">    
+		<ul class="header__login__links">
+			<li>Extranet | </li>
+			<li>Newsletter Subscription | </li>
+			<li>Sitemap | </li>  
+			<li>Career | </li>
+			<li>Contact | </li>
+			<li><img class="header__login__links__user-icon" src="images/user-icon.png" alt="User-icon"/></li>
+			<li>Niels Hansen</li>        
+		</ul> 
+	</section>
+	   
+ 	<section class="header__navigation">
+		<ul class="header__navigation__list">
+			<a onclick="Clear()"><li>Products</li></a>
+			<li>Industries &#38; solutions</li>
+			<li>Cases</li>  
+			<li>service &#38; support</li>
+			<li>Training</li>
+			<li>About Grundfos</li>
+			<li>How to buy</li> 
+    	</ul>     
+	</section>       
+</header> 	
+	
+<section class="platform animated fadeIn">
+
+	<div class="platform__title">
+		<h1 class="platform__title__light">Grundfoss</h1>
+		<h1 class="platform__title__bold">Ecademy</h1>
+	</div>
+	
+	<div id="Front" class="platform__front animated fadeIn">
+
+		<div class="platform__front__profileButton"> 
+			<a id="toProfileButton" onclick="toProfile()"><h1>Profile</h1></a>
+			<a id="fromProfileButton" class="hidden" onclick="fromProfile()"><h1>Back</h1></a>
+		</div>
+
+		<div class="platform__front__content">
+			
+			<div id="HowTo">
+				<div class="platform__front__content__circles">
+					<div class="platform__front__content__circles__single">
+						<div class="platform__front__content__circles__single__number"><p>1</p></div>
+						<img class="platform__front__content__circles__single__image" src="images/video.png" alt=""/>
+						<h2>Se videoer</h2>
+						<p class="platform__front__content__circles__single__des">Vælg hvilket kursus du ønsker at opdage ny viden indenfor.</p>
+					</div>
+					<img class="platform__front__content__circles__arrow1" src="images/arrow.png" alt=""/>
+					<div class="platform__front__content__circles__single">
+						<div class="platform__front__content__circles__single__number"><p>2</p></div>
+						<img class="platform__front__content__circles__single__image" src="images/question.png" alt=""/>
+						<h2>Svar på quizzes</h2>
+						<p class="platform__front__content__circles__single__des">Test din viden se hvor meget du har lært.</p>
+					</div>
+					<img class="platform__front__content__circles__arrow2" src="images/arrow.png" alt=""/>
+					<div class="platform__front__content__circles__single">
+						<div class="platform__front__content__circles__single__number"><p>3</p></div>
+						<img class="platform__front__content__circles__single__image" src="images/people.png" alt=""/>
+						<h2>Bliv Grundfos ekspert</h2>
+						<p class="platform__front__content__circles__single__des">Udforsk alle emner og bliv skarp på Grundfos produkterne</p>
+					</div>
+				</div>
+			</div>
+			<div id="Profile" class="hidden">
+				<div class="platform__front__content__circles">
+					<div class="platform__front__content__circles__single">
+						<img class="platform__front__content__circles__single__image" src="images/business.png" alt=""/>
+						<h2>Fremskridt 65%</h2>
+						<p class="platform__front__content__circles__single__des">Her kan du se hvor langt du er kommet kan du klare det hele?</p>
+					</div>
+					<div class="platform__front__content__circles__single">
+						<img class="platform__front__content__circles__single__companyLogo" src="images/logo-dahl.png" alt=""/>
+						<h2>Virksomheds profil</h2>
+						<p class="platform__front__content__circles__single__des">Din profil er tilknyttet:<br>Dahl Pedersen ecademy students</p>
+					</div>
+					<div class="platform__front__content__circles__single">
+						<img class="platform__front__content__circles__single__image" src="images/trophy.png" alt=""/>
+						<h2>Level</h2>
+						<p class="platform__front__content__circles__single__des">Du har opnået guld niveau keep up the work!</p>
+					</div>
+				</div>
+			</div>
+			<a href="#topics"><h1 class="platform__front__content__start">Start</h1></a> 
+		</div>   
+	</div>
+
+	<div id="Quiz" class="platform__quiz hidden animated fadeIn">
+		<div class="platform__quiz__question">
+			<div class="platform__quiz__question__header"> 
+				<a id="quizBack" onclick="">
+					<i class="platform__quiz__question__header__exitButton fas fa-arrow-left"></i>
+				</a>
+				<p id="questionAmount" class="platform__quiz__question__header__progress">2 of 3</p>
+				<button class="platform__quiz__question__header__nextButton" id="quizNext">Next</button>
+			</div>  
+			<p id="questionName" class="platform__quiz__question__name">Det her er et spørgsmål. Hvad er svaret?</p>   
+			<div id="QuizAnswers" class="platform__quiz__question__answers">
+				<a onclick="check_box1()"><div id="svar1" class="platform__quiz__question__answers__item"> 
+					<img src="images/A.png" alt=""/>
+					<p>Answer 1</p>
+					<input class="hid" type="radio" name="q1" id="yes1">
+				</div></a>
+				<a onclick="check_box2()"><div id="svar2" class="platform__quiz__question__answers__item"> 
+					<img src="images/b.png" alt=""/>
+					<p>Answer 2</p>
+					<input class="hid" type="radio" name="q1" id="no2">
+				</div></a>
+				<a onclick="check_box3()"><div id="svar3" class="platform__quiz__question__answers__item"> 
+					<img src="images/c.png" alt=""/>
+					<p>Answer 3</p>
+					<input class="hid" type="radio" name="q1" id="no3">
+				</div></a> 
+				<a onclick="check_box4()"><div id="svar4" class="platform__quiz__question__answers__item"> 
+					<img src="images/d.png" alt=""/>
+					<p>Answer 4</p>
+					<input class="hid" type="radio" name="q1" id="no4">
+				</div></a>     
+			</div>
+		</div>    
+	</div>  
+
+	<div id="Video" class="platform__video animated fadeIn hidden">
+		<div class="platform__video__header">
+			<h1 id="video_heading" class="platform__video__header__title">Commercial Heating: High Performance Heating </h1>
+			<a class="platform__video__header__exitButton" onclick="go_back()">
+				<i class="far fa-times-circle"></i>    
+			</a>
+		</div>    
+
+		<div class="platform__video__content">    
+			<div class="platform__video__content__current">
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/cEXWjzdpGnU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>    
+			</div>
+
+			<div class="platform__video__list">
+				<h1>Videos:</h1> 
+				<ul>
+					<a id="video_1_link" onclick="">
+						<li><i id="video_1_check" class="fas fa-check-square platform__video__list__checkBox"></i><p id="video_1"></p></li>
+					</a>
+					<a id="video_2_link" onclick="">
+						<li><i id="video_2_check" class="fas fa-check-square platform__video__list__checkBox"></i><p id="video_2"></p></li>
+					</a>
+					<a id="video_3_link" onclick="">
+						<li><i id="video_3_check" class="fas fa-check-square platform__video__list__checkBox"></i><p id="video_3"></p></li>
+					</a>
+					<a id="video_4_link" onclick="">
+						<li><i id="video_4_check" class="fas fa-check-square platform__video__list__checkBox"></i><p id="video_4"></p></li>
+					</a>
+					<button id="quiz_button" class="platform__video__list__quizButton" onclick="toQuiz()">Tag quizzen</button>
+				</ul>       
+			</div>    
+		</div>      
+	</div> 
+	
+</section>
+	
+<section class="progress">
+   	<p id="levelbar_procent"></p>
+    <div id="levelbar_filled" class="progress__bar"></div>
+</section>     
+    
+<section class="resume" id="reminder">
+	<div class="resume__content">    
+		<h1>Prickup where you left:</h1>
+		<h2 id="reminder_name"></h2>
+		<a id="resume_link" onclick=""><div class="resume__content__video"></div></a>
+   	</div>         
+</section>
+    
+<section id="topics" class="topics">   
+	<div class="topics__header">
+		<h1>Topics:</h1>
+		<ul>    
+		</ul>    
+		<div class="topics__header__filter">
+			<p>Filter</p>
+		</div>    
+	</div> 
+
+	<div class="topics__content"> 
+		<div class="topics__content__course">
+			<a href="#Video" onclick="video1()">
+				<img src="images/course1.png" alt=""/>
+				<h1>Commercial Heating Systems</h1>
+				<h2>This topic teaches you about heating systems in commercial buildings with a special focus on balancing and the advantages of using intelligent pump solutions.</h2>
+			</a>
+		</div>    
+		<div class="topics__content__course">
+			<a href="#Video" onclick="video2()">
+				<img src="images/course2.png" alt=""/>
+				<h1>Life Cycle Costs</h1>
+				<h2>This topic introduces you to the concept of life cycle cost analysis and reveals the hidden costs of a pumping system.</h2>
+			</a>
+		</div> 
+		<div class="topics__content__course">
+			<a href="#Video" onclick="video3()">
+				<img src="images/course3.png" alt=""/>
+				<h1>Water boosting in commercial buildings</h1>
+				<h2>In this topic you will learn about pressure boosting and how you can increase comfort and bring down operational costs by choosing the optimum solution. </h2>
+			</a>
+		</div> 
+		<div class="topics__content__course">
+			<a href="#Video" onclick="video4()">
+				<img src="images/course4.png" alt=""/>
+				<h1>Air Conditioning</h1>
+				<h2>This topic offers two perspectives on air conditioning: 1) How to choose the right control mode and 2) Affordability and flexibility of different systems.</h2>
+			</a>
+		</div>    
+		<div class="topics__content__course">
+			<a href="#Video" onclick="video5()">
+				<img src="images/course5.png" alt=""/>
+				<h1>Wastewater</h1>
+				<h2>This topic explains the different types of wastewater in commercial buildings and how to prevent backflow. It also gives tips on ideal wastewater system design.</h2>
+			</a>
+		</div> 
+		<div class="topics__content__course">
+			<a href="#Video" onclick="video6()">
+				<img src="images/course6.png" alt=""/>
+				<h1>About MAGNA3</h1>
+				<h2>Complete this topic to learn everything you need to know about the Grundfos MAGNA3 circulating pump, including technical details and installer and homeowner benefits.</h2>
+			</a>
+		</div>         
+	</div>    
+</section>
+       
+<footer></footer>   
+    
+</body>
+
+<script src="js/script.js"></script>
+
+</html>
